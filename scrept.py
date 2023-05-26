@@ -73,7 +73,7 @@ class othread(threading.Thread):
            WebDriverWait(driver, 12).until(EC.presence_of_element_located((By.CSS_SELECTOR,'body > div.master-wrapper-page > div.master-wrapper-content > div > div > div > div.page-body > div.buttons > a')))
            driver.find_element(By.CSS_SELECTOR,'body > div.master-wrapper-page > div.master-wrapper-content > div > div > div > div.page-body > div.buttons > a').click()
            sleep(1)
-           with open(r'emils_list.txt','a') as abood :
+           with open(r'data_list.txt','a') as abood :
                AA=FirstName+' / '+LastName+' / '+e+' / '+companyname
                abood.write(f"[{AA}]\n")
            driver.get('https://demo.nopcommerce.com/login?returnUrl=%2F')
